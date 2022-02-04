@@ -1,0 +1,453 @@
+/*Variáveis*/
+:root {
+    --green: #04c35c;
+    --blue: #2b6cb0;
+  
+    --white: #ffffff;
+    --white300: #f7fafc;
+  
+    --dark: #1a202c;
+    --input: #e8e8e8;
+    --teal-light:#628E75;
+    --teal-dark: #1A4855;
+    --linear: linear-gradient(130deg, #628E75 0%, #1A4855 100%);
+  }
+  
+  /*Reset*/
+  * {
+      font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+   height: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  button,
+  input {
+    border: 0;
+  }
+  button:focus,
+  input:focus {
+    border: 0;
+  }
+
+  .content{
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--teal-light);
+    background: var(--linear);
+    }
+  .container{
+      padding: 5px 20px;
+  }
+
+  header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  header .logo{
+      width: 35%;
+  }
+  header .social{
+      display: flex;
+      justify-content: space-between;
+      width: 35%;
+  }
+  header .social span i{
+      color: white;
+  }
+
+  .banner{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .banner .picture{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4%;
+    /* background-color: yellow; */
+    }
+  .banner .picture img{
+      width: 90%;
+      margin: auto;
+      /* background-color: var(--green); */
+    }
+    .banner .text-content{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .banner .text-content h5{
+        color: var(--white);
+        font-size: 1em;
+        margin-bottom: 2%;
+    }
+    .banner .text-content h3{
+        color: var(--white);
+        font-size: 2.8em;
+        margin-bottom: 5%;
+    }
+    .banner .text-content p{
+        color: var(--white);
+        margin-bottom: 5%;
+        font-size: 0.9em;
+    }
+    .banner .text-content .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .banner .text-content .links a{
+        padding: 4%5%;
+        margin-bottom: 4%;
+        color: var(--white);
+        font-weight: 700;
+        border: 1px solid transparent;
+        background-color: var(--teal-light);
+        min-width: 80%;
+        text-align: center;
+        transform: skew(-20deg) ;
+    }
+    .banner .text-content .links a::content,a::target-text {
+        color: var(--green);
+    }
+    .banner .text-content .links a.clean{
+        background-color: transparent;
+        border-color: var(--teal-light);
+    }
+    .banner .text-content .links a i{
+        margin-right: 10px;
+    }
+
+    .ghost{
+        position: static;
+        /* top: -200px; */
+        /* left: 0px; */
+        /* margin-top: 40px;  */
+        animation-name: none; 
+    }
+
+
+@media only screen and (min-width: 400px)
+{
+    .banner .picture{
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .banner .picture img{
+        width: 70%;
+        margin: auto;
+        /* background-color: var(--green); */
+      }
+      
+
+    .banner .text-content h3{
+        margin-bottom: 3%;
+    }
+
+}
+
+@media only screen and (min-width: 500px)
+{
+
+    .banner .text-content .links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .banner .text-content .links a{
+        padding: 3%4%;
+        margin-bottom: 3%;
+        min-width: 35%;
+        font-size: 0.9em;
+        margin-right: 10px;
+    }
+    .banner .text-content{
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+
+@media only screen and (min-width: 700px)
+{
+
+    header .logo{
+        width: 16%;
+    }
+    header .social{
+        width: 15%;
+    }
+
+    .content{
+        padding-top: 2%;
+    }
+    .container{
+        padding: 5px 50px;
+    }
+
+  .banner{
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.banner .picture{
+    position: relative;
+    margin-top: 4%;
+  /* background-color: yellow; */
+    width: 40%;
+}
+.banner .picture img{
+    width: 90%;
+    /* margin: auto; */
+    /* background-color: var(--green); */
+  }
+  .banner .text-content{
+    width: 50%;    
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+  }
+  .banner .text-content h5{
+      font-size: 1em;
+      margin-bottom: 2%;
+  }
+  .banner .text-content h3{
+      color: var(--white);
+      font-size: 2.4em;
+      margin-bottom: 5%;
+  }
+  .banner .text-content .links{
+      flex-direction: row;
+      
+  }
+
+  .banner .text-content .links a{
+    padding: 3%4%;
+    margin-bottom: 3%;
+    min-width: 35%;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+}
+
+
+@media only screen and (min-width: 1024px)
+{
+
+    header .logo{
+        width: 12%;
+    }
+    header .social{
+        width: 12%;
+    }
+    .container{
+        padding: 5px 100px;
+    }
+
+  .banner{
+    /* flex-direction: row-reverse; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* margin-top: 5%; */
+}
+.banner .picture{
+    margin-top: 2%;
+  /* background-color: yellow; */
+    width: 40%;
+}
+.banner .picture img{
+    width: 80%;
+    margin: 0;
+    /* background-color: var(--green); */
+  }
+  .banner .text-content{
+    width: 45%;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .banner .text-content h5{
+      font-size: 1.4em;
+      margin-bottom: 2%;
+  }
+  .banner .text-content h3{
+      font-size: 3.5em;
+      margin-bottom: 5%;
+  }
+
+  .banner .text-content p{
+    font-size: 1em;
+}
+  .banner .text-content .links{
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.banner .text-content .links a.clean:hover{
+    background-color: var(--teal-light);
+    transition: 0.3s;
+}
+
+.banner .text-content .links a.um:hover{
+    background-color: transparent;
+    transition: 0.3s;
+    border-color: var(--teal-light);
+}
+
+
+.banner .picture{
+    margin-top: 2%;
+    position: relative;
+  /* background-color: yellow; */
+    width: 40%;
+}
+.banner .picture img{
+    width: 80%;
+    margin: 0;
+    /* background-color: var(--green); */
+  }
+.ghost{
+    position: absolute;
+    top: -200px;
+    left: 0px;
+    /* margin-top: 40px;  */
+    animation-name: woo;
+    animation-duration: 3s;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite; 
+}
+@keyframes woo {
+    5%{
+        top: -200px;
+        left: 0px;
+    }
+    10%{
+        top: -210px;
+        left: 10px;
+    }
+
+    15%{
+        top: -215px;
+        left: 15px;
+    }
+    20%{
+        top: -220px;
+        left: 20px;
+    }
+    25%{
+        top: -225px;
+        left: 25px;
+    }
+    30%{
+        top: -220px;
+        left: 30px;
+    }
+    35%{
+        top: -218px;
+        left: 35px;
+    }
+    40%{
+        top: -213px;
+        left: 40px;
+    }
+    45%{
+        top: -207px;
+        left: 45px;
+    }
+
+
+    50%{
+        top: -200px;
+        left: 50px;
+    }
+    55%{
+        top: -200px;
+        left: 45px;
+    }
+
+    60%{
+        top: -200px;
+        left: 40px;
+    }
+    65%{
+        top: -200px;
+        left: 35px;
+    }
+    70%{
+        top: -200px;
+        left: 30px;
+    }
+
+    75%{
+        top: -200px;
+        left: 25px;
+    }
+    80%{
+        top: -200px;
+        left: 20px;
+    }
+
+    85%{
+        top: -200px;
+        left: 15px;
+    }
+    90%{
+        top: -200px;
+        left: 10px;
+    }
+    95%{
+        top: -200px;
+        left: 5px;
+    }
+    100%{
+        top: -200px;
+        left: 0px;
+    }
+}
+
+}
